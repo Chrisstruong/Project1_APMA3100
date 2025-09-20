@@ -13,16 +13,28 @@ class FrogSimulation:
         # The frog continues until it reaches to the other side of the pond (remaining distance = 0)
         while (self.remaining_distance > 0):
             self.total_hops += 1 # keep track the total number of jumps, starting at 1
-            print("Remaining distance to get to the other side of a pond", self.remaining_distance, "lily pads")
+            print("Remaining distance to get to the other side of a pond is", self.remaining_distance)
             next_hop = random.randint(1, self.remaining_distance) # The frog picks randomly between 1-remaining_distance
             self.current_pad += next_hop # keep track current position of the frog
             print(f"Next hop (pick 1-{self.remaining_distance}):", next_hop)
             self.remaining_distance -= next_hop # calculate the remaining distance
-            print("The frog is currently on lily pad number", self.current_pad)
+
+            if(self.remaining_distance != 0):
+                print("The frog is currently on lily pad number", self.current_pad)
+            else: 
+                print("The frog lands on the solid ground")
+                
             print("____________________________")
 
         print("********Simulation Ends****\n")
         return self.total_hops
+
+
+
+
+
+
+
 
 
 
