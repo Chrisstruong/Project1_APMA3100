@@ -29,10 +29,16 @@ class ReportPartD:
         for k in range(1, 101):
             self.expected_value += k * self.pmf
             self.my_expected_value_list.append(self.expected_value)
-        print(len(self.my_expected_value_list))
+        # print(len(self.my_expected_value_list))
+        # print(len(self.N_value))
         return self.expected_value
 
     def plot_expected_value(self):
+        # This condition is to check if the my_expected_value_list is empty
+        if not self.my_expected_value_list:
+            print("Expected values array is empty. Running the calculation for expected values from 1-100")
+            self.calculate_expected_jumps()
+
         plt.plot(self.N_value, self.my_expected_value_list)
         plt.title("Expected Number of Jumps vs. Number of Lily Pads")
         plt.xlabel("N hops")
@@ -41,6 +47,3 @@ class ReportPartD:
         plt.show()
 
 
-part_d = ReportPartD()
-part_d.calculate_expected_jumps()
-part_d.plot_expected_value()

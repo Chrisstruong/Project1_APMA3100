@@ -2,6 +2,7 @@ from frog_simulation import FrogSimulation
 from report_part_a import ReportPartA
 from report_part_b import ReportPartB
 from report_part_c import ReportPartC
+from report_part_d import ReportPartD
 
 # Frog Simulation run by frog_simulation.py
 N_value = int(input("Enter the N value: "))
@@ -24,6 +25,13 @@ part_b.print_out_PMF_table()
 print("\nc) When N=20, what is the expected number of jumps?")
 part_c = ReportPartC()
 print("When N=20, what the expected number of jumps is", part_c.calculate_expected_jumps())
+
 # Part d
+print("\nd) How does the expected value change as N increases?")
+part_d = ReportPartD()
+print("Table of values for estimates for E[X] for N=1,2,3,...,100")
+part_d.print_out_PMF_table()
+print("\nPlot of these results")
+part_d.plot_expected_value()
 
 

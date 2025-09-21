@@ -2,8 +2,6 @@ import pandas as pd
 from fractions import Fraction
 
 # Write you part c here
-
-
 class ReportPartC:
     def __init__(self):
         self.pmf = Fraction(1, 20)
@@ -25,5 +23,5 @@ class ReportPartC:
         return self.expected_value
 
 
-part_c = ReportPartC()
-print(part_c.calculate_expected_jumps())
+# part_c = ReportPartC()
+# print(part_c.calculate_expected_jumps())
