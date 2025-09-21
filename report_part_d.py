@@ -4,7 +4,7 @@ from fractions import Fraction
 import matplotlib.pyplot as plt
 
 
-
+# Download matplotlib instruction by command lines
 # python -m pip install -U pip
 # python -m pip install -U matplotlib
 
@@ -18,8 +18,8 @@ class ReportPartD:
 
     def print_out_PMF_table(self):
         data = {
-            'k': list(range(1, 100)) + ["Otherwise"],  # k = 1..99, else 0
-            'P(X=k)': [self.pmf] * 99 + [0]
+            'k': list(range(1, 101)) + ["Otherwise"],  # k = 1..99, else 0
+            'P(X=k)': [self.pmf] * 100 + [0]
         }
         df = pd.DataFrame(data)
         # index = False to hide the index column
