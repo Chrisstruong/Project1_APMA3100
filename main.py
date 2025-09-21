@@ -25,3 +25,5 @@ print("\nc) When N=20, what is the expected number of jumps?")
 part_c = ReportPartC()
 print("When N=20, what the expected number of jumps is", part_c.calculate_expected_jumps())
 # Part d
+
+
