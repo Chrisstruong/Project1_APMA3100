@@ -15,10 +15,21 @@ class ReportPartD:
         self.N_value = list(range(1,101))
 
     def print_out_PMF_table(self):
-        data = {
-            'k': list(range(1, 101)) + ["Otherwise"],  # k = 1..99, else 0
-            'P(X=k)': [self.pmf] * 100 + [0]
-        }
+        # This condition is to check if the my_expected_value_list is empty
+        if not self.my_expected_value_list:
+            print("Expected values array is empty. Running the calculation for expected values from 1-100")
+            self.calculate_expected_jumps()
+
+        # data = {
+        #     'k': list(range(1, 101)) + [0],  # k = 1..100, else 0
+        #     'P(X=k)': [self.pmf] * 100 + ["Otherwise"]
+        # }
+        data = []
+        for k in range(1,101):
+            data.append({
+                "k": k,
+                "E[X]": self.my_expected_value_list[k-1]
+            })
         df = pd.DataFrame(data)
         # index = False to hide the index column
         print(df.to_string(index=False))
