@@ -1,14 +1,12 @@
-# Write you part d here
 import pandas as pd
 from fractions import Fraction
 import matplotlib.pyplot as plt
-
 
 # Download matplotlib instruction by command lines
 # python -m pip install -U pip
 # python -m pip install -U matplotlib
 
-
+# Write you part D here
 class ReportPartD:
     def __init__(self):
         self.pmf = Fraction(1, 100)

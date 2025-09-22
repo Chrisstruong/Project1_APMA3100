@@ -21,7 +21,3 @@ class ReportPartC:
         for k in range(1,21):
             self.expected_value += k * self.pmf
         return self.expected_value
-
-
-# part_c = ReportPartC()
-# print(part_c.calculate_expected_jumps())
